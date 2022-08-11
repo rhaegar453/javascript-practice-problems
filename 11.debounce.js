@@ -1,10 +1,8 @@
-let time;
-const debounce = (callback, ms) => {
-  clearInterval(time);
-  time = setTimeout(callback, ms);
-};
-
-debounce(() => console.log("Hello World"), 1000);
-debounce(() => console.log("Hello World"), 1000);
-debounce(() => console.log("Hello World"), 1000);
-debounce(() => console.log("Hello World"), 1000);
+const debounce=(callback, delay=250)=>{
+  let time;
+  return (...args)=>{
+    clearTimeout(time);
+    time=setTimeout(()=>callback(...args), delay);
+  }
+}
+export default debounce;
