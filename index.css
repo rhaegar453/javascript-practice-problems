@@ -1,0 +1,15 @@
+.hack-container{
+    display: flex;
+    justify-content: flex-end;
+    background-color: black;
+    flex-direction: row-reverse;
+}
+.hack-container>div{
+    background-color: white;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    margin: 1px;
+}
+
